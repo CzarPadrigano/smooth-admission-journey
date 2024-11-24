@@ -20,7 +20,7 @@ export default {
     extend: {
       colors: {
         plp: {
-          maroon: "#228B22", // Changed from #800000 to Forest Green
+          maroon: "#006400", // Changed to Dark Green
           gold: "#FFD700",
         },
         border: "hsl(var(--border))",
@@ -29,12 +29,12 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "#228B22", // Changed from #800000 to Forest Green
+          DEFAULT: "#006400", // Changed to Dark Green
           foreground: "#FFFFFF",
         },
         secondary: {
           DEFAULT: "#FFD700",
-          foreground: "#228B22", // Changed from #800000 to Forest Green
+          foreground: "#006400", // Changed to Dark Green
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
