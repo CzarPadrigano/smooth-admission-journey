@@ -31,7 +31,7 @@ const Application = () => {
         <div className="container mx-auto">
           <Button
             variant="ghost"
-            className="text-white hover:text-white/80"
+            className="text-white hover:bg-white/10 hover:text-white"
             onClick={() => navigate("/dashboard")}
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
