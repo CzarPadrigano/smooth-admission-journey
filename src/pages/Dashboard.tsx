@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/components/ui/use-toast";
 import {
   FileText,
   Calendar,
@@ -10,6 +11,17 @@ import {
 } from "lucide-react";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+  const { toast } = useToast();
+
+  const handleLogout = () => {
+    toast({
+      title: "Logged out successfully",
+      description: "You have been logged out of your account",
+    });
+    navigate("/");
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <nav className="bg-plp-maroon text-white p-4">
@@ -21,9 +33,7 @@ const Dashboard = () => {
           <Button
             variant="ghost"
             className="text-white hover:bg-white/10 hover:text-white"
-            onClick={() => {
-              // Add logout logic here
-            }}
+            onClick={handleLogout}
           >
             <LogOut className="mr-2 h-4 w-4" />
             Logout
